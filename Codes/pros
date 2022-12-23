@@ -1,0 +1,19 @@
+
+
+# Import the package and create an audio effects chain function.
+import pandas as pd
+
+url = 'https://drive.google.com/file/d/1sikf30RaE1f1vkcsiOu6aI1lfqcsuI44/view?usp=share_link'
+url2 = 'https://drive.google.com/drive/folders/1BSYguwCjIEDtHJ7vLPstLVDAFApuLnzb'
+# Dataset is now stored in a Pandas Dataframe
+
+from pysndfx import AudioEffectsChain
+
+fx = (
+    AudioEffectsChain()
+    .highshelf()
+    .reverb()
+    .phaser()
+    .delay()
+    .lowshelf()
+)
